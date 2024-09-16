@@ -1,6 +1,8 @@
+import Header from "@/components/header";
+import MobileHeader from "@/components/mobile-header";
 import { cn } from "@/lib/utils";
 import type { Metadata } from "next";
-import { Poppins as FontSans } from "next/font/google";
+import { Chakra_Petch as FontSans } from "next/font/google";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -10,7 +12,7 @@ export const metadata: Metadata = {
 const fontSans = FontSans({
   subsets: ["latin"],
   variable: "--font-sans",
-  weight: ["400", "500", "600", "700", "800", "900", "200"],
+  weight: ["400", "500", "600", "700"],
 });
 
 export default function RootLayout({
@@ -22,10 +24,12 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <body
         className={cn(
-          "min-h-screen bg-background font-sans antialiased",
+          "min-h-screen bg-black text-white font-sans antialiased",
           fontSans.variable
         )}
       >
+        <Header />
+        <MobileHeader />
         {children}
       </body>
     </html>
