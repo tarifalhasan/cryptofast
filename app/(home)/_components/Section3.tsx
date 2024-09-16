@@ -42,7 +42,7 @@ const Section3 = () => {
           </svg>
         </Button>
       </div>
-      <div className=" flex flex-col lg:grid pt-10 pb-6 lg:grid-cols-12 gap-8">
+      <div className=" flex flex-col lg:grid pt-12  pb-6 lg:grid-cols-12 gap-8">
         <div className="col-span-12 lg:col-span-8 grid gap-8 lg:grid-cols-2">
           <div className="border border-[#393939]  px-10 py-16 flex flex-col gap-y-8">
             <div>
