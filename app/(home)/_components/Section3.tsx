@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import Image from "next/image";
 
 const Section3 = () => {
   return (
@@ -41,7 +42,7 @@ const Section3 = () => {
           </svg>
         </Button>
       </div>
-      <div className="grid pt-10 pb-6 lg:grid-cols-12 gap-8">
+      <div className=" flex flex-col lg:grid pt-10 pb-6 lg:grid-cols-12 gap-8">
         <div className="col-span-12 lg:col-span-8 grid gap-8 lg:grid-cols-2">
           <div className="border border-[#393939]  px-10 py-16 flex flex-col gap-y-8">
             <div>
@@ -209,7 +210,7 @@ const Section3 = () => {
             </div>
           </div>
         </div>
-        <div className="border col-span-12 lg:col-span-4 border-[#393939]  px-10 py-16 flex flex-col gap-y-8">
+        <div className="border min-h-[800px] relative col-span-12 lg:col-span-4 border-[#393939]  px-10 py-16 flex flex-col gap-y-8">
           <div>
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -248,6 +249,13 @@ const Section3 = () => {
               lightning-fast app for iOS and Android.
             </p>
           </div>
+          <Image
+            src={"/Section-3/Section-2-Image-6.png"}
+            alt="image"
+            width={300}
+            height={373}
+            className=" left-1/2 -translate-x-1/2 absolute bottom-0"
+          />
         </div>
       </div>
     </section>
