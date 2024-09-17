@@ -1,5 +1,4 @@
 import Marquee from "@/components/ui/marquee";
-import { cn } from "@/lib/utils";
 const logos = [
   {
     name: "Microsoft",
@@ -29,16 +28,20 @@ const logos = [
 
 const Logo = ({ name, img }: { name: string; img: string }) => {
   return (
-    <div className={cn(" cursor-pointer")}>
-      <img className="  aspect-[1/1] object-contain" src={img} alt={name} />
-    </div>
+    <>
+      <img
+        className="  aspect-[3/2] w-[10%] object-contain"
+        src={img}
+        alt={name}
+      />
+    </>
   );
 };
 const Section2 = () => {
   return (
     <section>
       <div className=" py-12  ">
-        <div className=" relative space-y-5">
+        <div className=" relative z-40 space-y-5">
           <div>
             <h4 className="text-2xl bg-headingText font-semibold bg-clip-text text-center">
               Our Partners

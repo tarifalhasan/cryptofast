@@ -1,10 +1,18 @@
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
+
+import g2 from "@/public/Footer/Line.png";
+import Image from "next/image";
 import Link from "next/link";
 import { Button } from "./ui/button";
-
 const Footer = () => {
   return (
     <footer className="relative -mt-20 pt-40 pb-16 z-20">
-      <div className="container flex flex-col lg:flex-row lg:items-start lg:justify-between gap-8">
+      <div className="container relative z-20 flex flex-col lg:flex-row lg:items-start lg:justify-between gap-8">
         <div className="lg:max-w-[410px] flex flex-col gap-y-5">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -1012,7 +1020,7 @@ const Footer = () => {
           </div>
           <div>
             <h4 className="text-2xl font-medium text-white">Social</h4>
-            <ul className="pt-6 grid gap-6 grid-cols-2 ">
+            <ul className="pt-6 flex items-center lg:grid gap-6 lg:grid-cols-2 ">
               <li className="flex items-center justify-center">
                 <Link
                   className="text-base font-normal text-white/80"
@@ -1181,11 +1189,133 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <div className=" container border-t mt-10 py-7 border-[#F0F0F01A]/10 flex flex-col lg:flex-row lg:items-center justify-between">
+      <div className=" relative z-20 container border-t mt-10 py-7 border-[#F0F0F01A]/10 flex flex-col lg:flex-row lg:items-center justify-between">
         <p className="text-white/50 text-base font-normal">
           © Ozarke | OptimusZ7 | All Rights Reserved
         </p>
+        <div className="inline-flex items-center gap-6 justify-between">
+          <div className="inline-flex items-center gap-2">
+            <p className="text-base font-normal">Theme</p>
+            <div className="border py-1 px-2 inline-flex items-center gap-2  border-[#3F61C1] rounded-full">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width={23}
+                height={24}
+                viewBox="0 0 23 24"
+                fill="none"
+              >
+                <path
+                  d="M19.4174 13.0391C18.789 13.206 18.1415 13.2905 17.4913 13.2904C15.5114 13.2904 13.652 12.5207 12.2554 11.1241C11.3383 10.2017 10.679 9.05502 10.3431 7.79839C10.0073 6.54175 10.0067 5.21904 10.3414 3.96209C10.3832 3.80493 10.3829 3.63955 10.3406 3.48253C10.2983 3.3255 10.2155 3.18236 10.1004 3.06747C9.98529 2.95257 9.84201 2.86996 9.68492 2.82792C9.52783 2.78587 9.36244 2.78588 9.20535 2.82793C7.63177 3.24727 6.19613 4.07303 5.04244 5.22237C1.42759 8.83722 1.42759 14.7213 5.04244 18.338C5.90166 19.202 6.92371 19.8871 8.04944 20.3535C9.17516 20.8199 10.3822 21.0584 11.6007 21.0552C12.8189 21.0586 14.0257 20.8203 15.1511 20.354C16.2766 19.8878 17.2983 19.2029 18.1572 18.339C19.3074 17.185 20.1335 15.7486 20.5525 14.1742C20.5942 14.0171 20.5938 13.8518 20.5515 13.6949C20.5093 13.538 20.4265 13.3949 20.3116 13.28C20.1967 13.1651 20.0536 13.0824 19.8967 13.0401C19.7398 12.9978 19.5745 12.9975 19.4174 13.0391ZM16.8468 17.0277C16.1596 17.7186 15.3422 18.2665 14.4419 18.6394C13.5415 19.0124 12.5762 19.2031 11.6017 19.2005C10.6268 19.2029 9.66115 19.012 8.76052 18.6389C7.8599 18.2658 7.04218 17.7179 6.35465 17.0267C3.46314 14.1343 3.46314 9.42702 6.35465 6.53459C6.91339 5.97648 7.55845 5.51209 8.26501 5.15931C8.16159 6.49384 8.3475 7.83496 8.81005 9.09103C9.27259 10.3471 10.0009 11.4885 10.9451 12.4372C11.8917 13.3844 13.0328 14.1147 14.2894 14.5776C15.546 15.0405 16.8881 15.225 18.223 15.1182C17.8683 15.8236 17.4038 16.4681 16.8468 17.0277Z"
+                  fill="url(#paint0_linear_11134_889)"
+                />
+                <defs>
+                  <linearGradient
+                    id="paint0_linear_11134_889"
+                    x1="2.3313"
+                    y1="20.9712"
+                    x2="20.6453"
+                    y2="2.77456"
+                    gradientUnits="userSpaceOnUse"
+                  >
+                    <stop stopColor="#3F61C1" />
+                    <stop offset={1} stopColor="#37E6F4" />
+                  </linearGradient>
+                </defs>
+              </svg>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="22"
+                height="22"
+                viewBox="0 0 22 22"
+                fill="none"
+              >
+                <circle cx="10.8222" cy="11.0882" r="10.201" fill="#F1F1F1" />
+              </svg>
+            </div>
+          </div>
+          <DropdownMenu>
+            <DropdownMenuTrigger asChild>
+              <button className=" inline-flex items-center text-base font-normal gap-2">
+                $USD
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width={9}
+                  height={5}
+                  viewBox="0 0 9 5"
+                  fill="none"
+                >
+                  <path
+                    d="M4.6416 4.05127L0.641602 0.0512695H8.6416L4.6416 4.05127Z"
+                    fill="url(#paint0_linear_11134_896)"
+                  />
+                  <defs>
+                    <linearGradient
+                      id="paint0_linear_11134_896"
+                      x1="0.641602"
+                      y1="4.03286"
+                      x2="3.863"
+                      y2="-2.37098"
+                      gradientUnits="userSpaceOnUse"
+                    >
+                      <stop stopColor="#3F61C1" />
+                      <stop offset={1} stopColor="#37E6F4" />
+                    </linearGradient>
+                  </defs>
+                </svg>
+              </button>
+            </DropdownMenuTrigger>
+            <DropdownMenuContent>
+              <DropdownMenuItem>BDT</DropdownMenuItem>
+              <DropdownMenuItem>Billing</DropdownMenuItem>
+              <DropdownMenuItem>Team</DropdownMenuItem>
+              <DropdownMenuItem>Subscription</DropdownMenuItem>
+            </DropdownMenuContent>
+          </DropdownMenu>
+          <DropdownMenu>
+            <DropdownMenuTrigger asChild>
+              <button className=" inline-flex items-center text-base font-normal gap-2">
+                ENG
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width={9}
+                  height={5}
+                  viewBox="0 0 9 5"
+                  fill="none"
+                >
+                  <path
+                    d="M4.6416 4.05127L0.641602 0.0512695H8.6416L4.6416 4.05127Z"
+                    fill="url(#paint0_linear_11134_896)"
+                  />
+                  <defs>
+                    <linearGradient
+                      id="paint0_linear_11134_896"
+                      x1="0.641602"
+                      y1="4.03286"
+                      x2="3.863"
+                      y2="-2.37098"
+                      gradientUnits="userSpaceOnUse"
+                    >
+                      <stop stopColor="#3F61C1" />
+                      <stop offset={1} stopColor="#37E6F4" />
+                    </linearGradient>
+                  </defs>
+                </svg>
+              </button>
+            </DropdownMenuTrigger>
+            <DropdownMenuContent>
+              <DropdownMenuItem>BDT</DropdownMenuItem>
+              <DropdownMenuItem>Billing</DropdownMenuItem>
+              <DropdownMenuItem>Team</DropdownMenuItem>
+              <DropdownMenuItem>Subscription</DropdownMenuItem>
+            </DropdownMenuContent>
+          </DropdownMenu>
+        </div>
       </div>
+      <Image
+        src={g2}
+        alt="dfdfd"
+        className=" absolute bottom-0 left-0 right-0 max-w-[1200px] w-full"
+      />
     </footer>
   );
 };
