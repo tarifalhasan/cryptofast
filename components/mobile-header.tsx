@@ -8,6 +8,7 @@ import {
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
+import LaunchAppBtn from "./LaunchAppBtn";
 const MobileHeader = () => {
   const [isOpenSheet, setIsOpenSheet] = useState(false);
 
@@ -56,12 +57,16 @@ const MobileHeader = () => {
                 </Link>
               </li>
               <li onClick={() => setIsOpenSheet(false)}>
-                <Link
+                <a
+                  target="_blank"
                   className="text-base font-medium text-white"
-                  href={"#products"}
+                  href={"https://www.OptimusZ7.com"}
                 >
-                  News Update
-                </Link>
+                  OptimusZ7
+                </a>
+              </li>
+              <li onClick={() => setIsOpenSheet(false)}>
+                <LaunchAppBtn />
               </li>
             </ul>
           </SheetHeader>

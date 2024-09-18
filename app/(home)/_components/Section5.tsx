@@ -83,8 +83,8 @@ const Section5 = () => {
             </div>
           </div>
         </div>
-        <div className="flex pt-11  justify-center">
-          <Button className=" rounded-none">
+        <div className="flex relative z-30 pt-11  justify-center">
+          <Button className="hover_btn rounded-none">
             More updates
             <svg
               xmlns="http://www.w3.org/2000/svg"

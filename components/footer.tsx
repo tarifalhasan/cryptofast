@@ -10,6 +10,107 @@ import Image from "next/image";
 import Link from "next/link";
 import { Button } from "./ui/button";
 const Footer = () => {
+  const currencies = [
+    "USD-$",
+    "AED-د.إ",
+    "ARS-ARS$",
+    "AUD-A$",
+    "BDT-৳",
+    "BGN-лв",
+    "BHD-.د.ب",
+    "BOB-$b",
+    "BRL-R$",
+    "CAD-C$",
+    "CHF-CHF",
+    "CNY-¥",
+    "COP-COL$",
+    "CZK-Kč",
+    "DKK-KR",
+    "EGP-E£",
+    "EUR-€",
+    "GBP-£",
+    "HKD-HKD",
+    "HRK-kn",
+    "HUF-Ft",
+    "IDR-Rp",
+    "INR-₹",
+    "JPY-¥",
+    "KES-KSh",
+    "KWD-ك.د",
+    "KZT-₸",
+    "MAD-م.د.",
+    "MNT-₮",
+    "MXN-Mex$",
+    "NZD-NZ$",
+    "OMR-ر.ع.",
+    "PEN-S/.",
+    "PHP-₱",
+    "PKR-₨",
+    "PLN-zł",
+    "QAR-ر.ق",
+    "RON-lei",
+    "RUB-₽",
+    "SAR-ر.س",
+    "SEK-kr",
+    "THB-฿",
+    "TRY-₺",
+    "TWD-NT$",
+    "UAH-₴",
+    "UGX-USh",
+    "VES-Bs",
+    "VND-₫",
+    "ZAR-R",
+  ];
+  const languages = [
+    "English",
+    "العربية",
+    "العربية (البحرين)",
+    "български",
+    "Čeština",
+    "Dansk",
+    "Deutsch (Schweiz)",
+    "Ελληνικά",
+    "English (UAE)",
+    "English (Australia)",
+    "English (Bahrain)",
+    "English (India)",
+    "English (Japan)",
+    "English (Kazakhstan)",
+    "English (Nigeria)",
+    "English (New Zealand)",
+    "English (South Africa)",
+    "Español (España)",
+    "Español (Argentina)",
+    "Español (Latinoamérica)",
+    "Español (México)",
+    "Français",
+    "Français (Afrique)",
+    "magyar nyelv",
+    "Bahasa Indonesia",
+    "Italiano",
+    "日本語",
+    "Қазақша (Қазақстан)",
+    "Қазақша",
+    "ລາວ",
+    "latviešu valoda",
+    "Polski",
+    "Português",
+    "Português (Brasil)",
+    "Română",
+    "Русский",
+    "Русский (Казахстан)",
+    "Русский (Украина)",
+    "සිංහල",
+    "Slovenčina",
+    "Slovenščina",
+    "Svenska",
+    "Türkçe",
+    "Українська",
+    "Tiếng Việt",
+    "简体中文",
+    "繁體中文",
+  ];
+
   return (
     <footer className="relative -mt-20 pt-40 pb-16 z-20">
       <div className="container relative z-20 flex flex-col lg:flex-row lg:items-start lg:justify-between gap-8">
@@ -905,7 +1006,7 @@ const Footer = () => {
               type="text"
               placeholder="Enter your email."
             />
-            <Button className="h-12 rounded-none">Subscribe</Button>
+            <Button className="h-12 hover_btn rounded-none">Subscribe</Button>
           </div>
           <p className="text-base font-normal leading-[150%]">
             Don’t miss out. Subscribe now for insider news!
@@ -1264,13 +1365,17 @@ const Footer = () => {
                 </svg>
               </button>
             </DropdownMenuTrigger>
-            <DropdownMenuContent>
-              <DropdownMenuItem>BDT</DropdownMenuItem>
-              <DropdownMenuItem>Billing</DropdownMenuItem>
-              <DropdownMenuItem>Team</DropdownMenuItem>
-              <DropdownMenuItem>Subscription</DropdownMenuItem>
+            <DropdownMenuContent className="max-h-[400px] bg-black text-white overflow-y-auto">
+              <input
+                placeholder="search"
+                className="text-sm text-white px-2 bg-transparent border py-1.5 rounded-md"
+              />
+              {currencies.map((item, index) => (
+                <DropdownMenuItem key={index}>{item}</DropdownMenuItem>
+              ))}
             </DropdownMenuContent>
           </DropdownMenu>
+
           <DropdownMenu>
             <DropdownMenuTrigger asChild>
               <button className=" inline-flex items-center text-base font-normal gap-2">
@@ -1302,11 +1407,14 @@ const Footer = () => {
                 </svg>
               </button>
             </DropdownMenuTrigger>
-            <DropdownMenuContent>
-              <DropdownMenuItem>BDT</DropdownMenuItem>
-              <DropdownMenuItem>Billing</DropdownMenuItem>
-              <DropdownMenuItem>Team</DropdownMenuItem>
-              <DropdownMenuItem>Subscription</DropdownMenuItem>
+            <DropdownMenuContent className="max-h-[400px] bg-black text-white overflow-y-auto">
+              <input
+                placeholder="search"
+                className="text-sm text-white px-2 bg-transparent border py-1.5 rounded-md"
+              />
+              {languages.map((item, index) => (
+                <DropdownMenuItem key={index}>{item}</DropdownMenuItem>
+              ))}
             </DropdownMenuContent>
           </DropdownMenu>
         </div>
