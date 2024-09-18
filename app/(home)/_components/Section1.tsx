@@ -1,4 +1,5 @@
 import LaunchAppBtn from "@/components/LaunchAppBtn";
+import TypingAnimation from "@/components/magicui/typing-animation";
 import Image from "next/image";
 
 const Section1 = () => {
@@ -17,9 +18,11 @@ const Section1 = () => {
       <div className="container pt-[4rem]   lg:pt-[0]">
         <div className=" relative  z-20  lg:absolute lg:top-1/2 lg:-translate-y-1/2 lg:max-w-[576px] xl:max-w-[678px] space-y-5">
           <div>
-            <h1 className="bg-clip-text uppercase bg-headingText font-medium leading-[110%] text-[3.125rem] xl:text-[4.375rem]">
-              Redefining Financial Freedom
-            </h1>
+            <TypingAnimation
+              className="bg-clip-text text-left uppercase bg-headingText font-medium leading-[100%] text-[3.125rem] xl:text-[4.375rem]"
+              text="Redefining Financial Freedom"
+              duration={100}
+            />
           </div>
           <p className="text-base xl:text-xl font-normal text-white">
             Unlock limitless possibilities with a decentralized approach to

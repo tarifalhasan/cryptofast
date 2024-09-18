@@ -1125,7 +1125,8 @@ const Footer = () => {
               <li className="flex items-center justify-center">
                 <Link
                   className="text-base font-normal text-white/80"
-                  href={"/"}
+                  href={"https://x.com/ozarke_io"}
+                  target="_blank"
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -1145,7 +1146,8 @@ const Footer = () => {
               <li className="flex items-center justify-center">
                 <Link
                   className="text-base font-normal text-white/80"
-                  href={"/"}
+                  href={"https://x.com/ozarke_io"}
+                  target="_blank"
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -1165,7 +1167,8 @@ const Footer = () => {
               <li className="flex items-center justify-center">
                 <Link
                   className="text-base font-normal text-white/80"
-                  href={"/"}
+                  href={"https://x.com/ozarke_io"}
+                  target="_blank"
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -1185,7 +1188,8 @@ const Footer = () => {
               <li className="flex items-center justify-center">
                 <Link
                   className="text-base font-normal text-white/80"
-                  href={"/"}
+                  href={"https://x.com/ozarke_io"}
+                  target="_blank"
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -1205,7 +1209,8 @@ const Footer = () => {
               <li className="flex items-center justify-center">
                 <Link
                   className="text-base font-normal text-white/80"
-                  href={"/"}
+                  href={"https://x.com/ozarke_io"}
+                  target="_blank"
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -1225,7 +1230,8 @@ const Footer = () => {
               <li className="flex items-center justify-center">
                 <Link
                   className="text-base font-normal text-white/80"
-                  href={"/"}
+                  href={"https://x.com/ozarke_io"}
+                  target="_blank"
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -1245,7 +1251,8 @@ const Footer = () => {
               <li className="flex items-center justify-center">
                 <Link
                   className="text-base font-normal text-white/80"
-                  href={"/"}
+                  href={"https://x.com/ozarke_io"}
+                  target="_blank"
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -1265,7 +1272,8 @@ const Footer = () => {
               <li className="flex items-center justify-center">
                 <Link
                   className="text-base font-normal text-white/80"
-                  href={"/"}
+                  href={"https://x.com/ozarke_io"}
+                  target="_blank"
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
