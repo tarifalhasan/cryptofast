@@ -21,7 +21,7 @@ const Section1 = () => {
             <TypingAnimation
               className="bg-clip-text text-left uppercase bg-headingText font-medium leading-[100%] text-[3.125rem] xl:text-[4.375rem]"
               text="Redefining Financial Freedom"
-              duration={100}
+              duration={200}
             />
           </div>
           <p className="text-base xl:text-xl font-normal text-white">
@@ -32,7 +32,7 @@ const Section1 = () => {
               <a
                 target="_blank"
                 href="https://www.optimusz7.com/"
-                className="bg-clip-text bg-btnBg"
+                className="text-[#37E6F4] transition-all duration-700 hover:text-blue-500"
               >
                 OptimusZ7
               </a>{" "}

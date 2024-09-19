@@ -8,7 +8,7 @@ import {
 import g2 from "@/public/Footer/Line.png";
 import Image from "next/image";
 import Link from "next/link";
-import { Button } from "./ui/button";
+import LaunchAppBtn from "./LaunchAppBtn";
 const Footer = () => {
   const currencies = [
     "USD-$",
@@ -1006,7 +1006,8 @@ const Footer = () => {
               type="text"
               placeholder="Enter your email."
             />
-            <Button className="h-12 hover_btn rounded-none">Subscribe</Button>
+
+            <LaunchAppBtn text="Subscribe" />
           </div>
           <p className="text-base font-normal leading-[150%]">
             Don’t miss out. Subscribe now for insider news!
@@ -1018,7 +1019,7 @@ const Footer = () => {
             <ul className="pt-6 space-y-4">
               <li>
                 <Link
-                  className="text-base font-normal text-white/80"
+                  className="text-base hover:text-[#37E6F4] transition-colors duration-500 font-normal text-white/80"
                   href={"/"}
                 >
                   Exchange
@@ -1026,7 +1027,7 @@ const Footer = () => {
               </li>
               <li>
                 <Link
-                  className="text-base font-normal text-white/80"
+                  className="text-base hover:text-[#37E6F4] transition-colors duration-500 font-normal text-white/80"
                   href={"/"}
                 >
                   Buy Crypto
@@ -1034,7 +1035,7 @@ const Footer = () => {
               </li>
               <li>
                 <Link
-                  className="text-base font-normal text-white/80"
+                  className="text-base hover:text-[#37E6F4] transition-colors duration-500 font-normal text-white/80"
                   href={"/"}
                 >
                   Wallet
@@ -1042,7 +1043,7 @@ const Footer = () => {
               </li>
               <li>
                 <Link
-                  className="text-base font-normal text-white/80"
+                  className="text-base hover:text-[#37E6F4] transition-colors duration-500 font-normal text-white/80"
                   href={"/"}
                 >
                   Staking
@@ -1050,7 +1051,7 @@ const Footer = () => {
               </li>
               <li>
                 <Link
-                  className="text-base font-normal text-white/80"
+                  className="text-base hover:text-[#37E6F4] transition-colors duration-500 font-normal text-white/80"
                   href={"/"}
                 >
                   Fees
@@ -1058,7 +1059,7 @@ const Footer = () => {
               </li>
               <li>
                 <Link
-                  className="text-base font-normal text-white/80"
+                  className="text-base hover:text-[#37E6F4] transition-colors duration-500 font-normal text-white/80"
                   href={"/"}
                 >
                   APIs
@@ -1071,7 +1072,7 @@ const Footer = () => {
             <ul className="pt-6 space-y-4">
               <li>
                 <Link
-                  className="text-base font-normal text-white/80"
+                  className="text-base hover:text-[#37E6F4] transition-colors duration-500 font-normal text-white/80"
                   href={"/"}
                 >
                   About
@@ -1079,7 +1080,7 @@ const Footer = () => {
               </li>
               <li>
                 <Link
-                  className="text-base font-normal text-white/80"
+                  className="text-base hover:text-[#37E6F4] transition-colors duration-500 font-normal text-white/80"
                   href={"/"}
                 >
                   Careers{" "}
@@ -1087,7 +1088,7 @@ const Footer = () => {
               </li>
               <li>
                 <Link
-                  className="text-base font-normal text-white/80"
+                  className="text-base hover:text-[#37E6F4] transition-colors duration-500 font-normal text-white/80"
                   href={"/"}
                 >
                   Support Center
@@ -1095,7 +1096,7 @@ const Footer = () => {
               </li>
               <li>
                 <Link
-                  className="text-base font-normal text-white/80"
+                  className="text-base hover:text-[#37E6F4] transition-colors duration-500 font-normal text-white/80"
                   href={"/"}
                 >
                   Investors
@@ -1103,7 +1104,7 @@ const Footer = () => {
               </li>
               <li>
                 <Link
-                  className="text-base font-normal text-white/80"
+                  className="text-base hover:text-[#37E6F4] transition-colors duration-500 font-normal text-white/80"
                   href={"/"}
                 >
                   Terms
@@ -1111,7 +1112,7 @@ const Footer = () => {
               </li>
               <li>
                 <Link
-                  className="text-base font-normal text-white/80"
+                  className="text-base hover:text-[#37E6F4] transition-colors duration-500 font-normal text-white/80"
                   href={"/"}
                 >
                   Privacy
@@ -1124,7 +1125,7 @@ const Footer = () => {
             <ul className="pt-6 flex items-center lg:grid gap-6 lg:grid-cols-2 ">
               <li className="flex items-center justify-center">
                 <Link
-                  className="text-base font-normal text-white/80"
+                  className="text-base hover:text-[#37E6F4] transition-colors duration-500 font-normal text-white/80"
                   href={"https://x.com/ozarke_io"}
                   target="_blank"
                 >
@@ -1145,7 +1146,7 @@ const Footer = () => {
               </li>
               <li className="flex items-center justify-center">
                 <Link
-                  className="text-base font-normal text-white/80"
+                  className="text-base hover:text-[#37E6F4] transition-colors duration-500 font-normal text-white/80"
                   href={"https://x.com/ozarke_io"}
                   target="_blank"
                 >
@@ -1166,7 +1167,7 @@ const Footer = () => {
               </li>
               <li className="flex items-center justify-center">
                 <Link
-                  className="text-base font-normal text-white/80"
+                  className="text-base hover:text-[#37E6F4] transition-colors duration-500 font-normal text-white/80"
                   href={"https://x.com/ozarke_io"}
                   target="_blank"
                 >
@@ -1187,7 +1188,7 @@ const Footer = () => {
               </li>
               <li className="flex items-center justify-center">
                 <Link
-                  className="text-base font-normal text-white/80"
+                  className="text-base hover:text-[#37E6F4] transition-colors duration-500 font-normal text-white/80"
                   href={"https://x.com/ozarke_io"}
                   target="_blank"
                 >
@@ -1208,7 +1209,7 @@ const Footer = () => {
               </li>
               <li className="flex items-center justify-center">
                 <Link
-                  className="text-base font-normal text-white/80"
+                  className="text-base hover:text-[#37E6F4] transition-colors duration-500 font-normal text-white/80"
                   href={"https://x.com/ozarke_io"}
                   target="_blank"
                 >
@@ -1229,7 +1230,7 @@ const Footer = () => {
               </li>
               <li className="flex items-center justify-center">
                 <Link
-                  className="text-base font-normal text-white/80"
+                  className="text-base hover:text-[#37E6F4] transition-colors duration-500 font-normal text-white/80"
                   href={"https://x.com/ozarke_io"}
                   target="_blank"
                 >
@@ -1250,7 +1251,7 @@ const Footer = () => {
               </li>
               <li className="flex items-center justify-center">
                 <Link
-                  className="text-base font-normal text-white/80"
+                  className="text-base hover:text-[#37E6F4] transition-colors duration-500 font-normal text-white/80"
                   href={"https://x.com/ozarke_io"}
                   target="_blank"
                 >
@@ -1271,7 +1272,7 @@ const Footer = () => {
               </li>
               <li className="flex items-center justify-center">
                 <Link
-                  className="text-base font-normal text-white/80"
+                  className="text-base hover:text-[#37E6F4] transition-colors duration-500 font-normal text-white/80"
                   href={"https://x.com/ozarke_io"}
                   target="_blank"
                 >

@@ -1,4 +1,10 @@
+"use client";
+
 import { Button } from "@/components/ui/button";
+import dynamic from "next/dynamic";
+
+// Dynamically import ReactPlayer to prevent SSR issues
+const ReactPlayer = dynamic(() => import("react-player"), { ssr: false });
 
 const Section5 = () => {
   return (
@@ -8,81 +14,31 @@ const Section5 = () => {
           News Updates
         </p>
         <h2 className="text-4xl text-center bg-clip-text bg-headingText font-medium leading-[110%]">
-          Browse ourLatest news Updates
+          Browse our Latest news Updates
         </h2>
       </div>
-      <div className="pt-16">
-        <div className="grid grid-cols-12 gap-8">
-          <div className="col-span-12 lg:col-span-4 h-[463px] bg-no-repeat bg-cover flex flex-col justify-end bg-[url('/Section-5/Section-5-Image-1.png')] border border-[#393939] p-10">
-            <div className="space-y-4">
-              <div className="py-[9.34px] rounded-full inline-flex px-5 bg-black/25">
-                <span className="text-sm font-bold text-white">
-                  FEATURED INSIGHT
-                </span>
-              </div>
-              <h2 className="text-white text-[1.625rem] font-bold leading-[120%]">
-                Crypto brings teams together around insights with Google
-                Marketing Platform
-              </h2>
-            </div>
-          </div>
-          <div className=" col-span-12 lg:col-span-8 h-[463px] bg-no-repeat bg-cover flex flex-col justify-end bg-[url('/Section-5/Section-5-Image-2.png')] border border-[#393939] p-10">
-            <div className="space-y-4">
-              <div className="py-[9.34px] rounded-full inline-flex px-5 bg-black/25">
-                <span className="text-sm font-bold text-white">
-                  FEATURED INSIGHT
-                </span>
-              </div>
-              <h2 className="text-white max-w-[643px] text-[1.625rem] font-bold leading-[120%]">
-                Bain report: How top brands grow with timely customer
-                connections.
-              </h2>
-              <p className="text-lg max-w-[643px] font-normal leading-[140%]">
-                Office ipsum you must be muted. Give wheel boy recap red-flag
-                replied customer world job. Old call intersection company pants.
-              </p>
-            </div>
-          </div>
-          <div className="col-span-12 lg:col-span-4 h-[463px] bg-no-repeat bg-cover flex flex-col justify-end bg-[url('/Section-5/Section-5-Image-3.png')] border border-[#393939] p-10">
-            <div className="space-y-4">
-              <div className="py-[9.34px] rounded-full inline-flex px-5 bg-black/25">
-                <span className="text-sm font-bold text-white">
-                  FEATURED INSIGHT
-                </span>
-              </div>
-              <h2 className="text-white text-[1.625rem] font-bold leading-[120%]">
-                Crypto brings teams together around insights with Google
-                Marketing Platform
-              </h2>
-            </div>
-          </div>
-          <div className="col-span-12 lg:col-span-4 h-[463px] bg-no-repeat bg-cover flex flex-col justify-end bg-[url('/Section-5/Section-5-Image-4.png')] border border-[#393939] p-10">
-            <div className="space-y-4">
-              <div className="py-[9.34px] rounded-full inline-flex px-5 bg-black/25">
-                <span className="text-sm font-bold text-white">
-                  FEATURED INSIGHT
-                </span>
-              </div>
-              <h2 className="text-white text-[1.625rem] font-bold leading-[120%]">
-                Crypto brings teams together around insights with Google
-                Marketing Platform
-              </h2>
-            </div>
-          </div>
-          <div className="col-span-12 lg:col-span-4 h-[463px] bg-no-repeat bg-cover flex flex-col justify-end bg-[url('/Section-5/Section-5-Image-5.png')] border border-[#393939] p-10">
-            <div className="space-y-4">
-              <div className="py-[9.34px] rounded-full inline-flex px-5 bg-black/25">
-                <span className="text-sm font-bold text-white">
-                  FEATURED INSIGHT
-                </span>
-              </div>
-              <h2 className="text-white text-[1.625rem] font-bold leading-[120%]">
-                Crypto brings teams together around insights with Google
-                Marketing Platform
-              </h2>
-            </div>
-          </div>
+      <div className="pt-16 relative z-40 ">
+        <div className="relative w-full z-40 pb-[56.25%]">
+          {/* Aspect ratio container */}
+          {/* <iframe
+            className="absolute top-0 left-0 w-full h-full"
+            src="https://www.youtube.com/embed/gEvJsqeuzVk?autoplay=1&loop=1&playlist=gEvJsqeuzVk&controls=1&fs=1&rel=0&modestbranding=1"
+            title="OptimusZ7: Crafting Tomorrow's Blockchain Today"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowFullScreen
+          ></iframe> */}
+          <ReactPlayer
+            className="absolute top-0 left-0 w-full h-full"
+            url="https://www.youtube.com/watch?v=gEvJsqeuzVk"
+            playing={true} // Enable autoplay
+            loop={true} // Loop the video
+            controls={true} // Show video controls
+            muted
+            width="100%"
+            height="100%"
+          />
         </div>
+
         <div className="flex relative z-30 pt-11  justify-center">
           <Button className="hover_btn rounded-none">
             More updates
