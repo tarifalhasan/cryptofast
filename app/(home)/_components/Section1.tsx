@@ -19,7 +19,7 @@ const Section1 = () => {
         <div className=" relative  z-20  lg:absolute lg:top-1/2 lg:-translate-y-1/2 lg:max-w-[576px] xl:max-w-[678px] space-y-5">
           <div>
             <TypingAnimation
-              className="bg-clip-text text-left uppercase bg-headingText font-medium leading-[100%] text-[3.125rem] xl:text-[4.375rem]"
+              className="bg-clip-text text-left uppercase bg-headingText font-medium leading-[100%] text-[3.125rem]  xl:text-[4.375rem]"
               text="Redefining Financial Freedom"
               duration={200}
             />
