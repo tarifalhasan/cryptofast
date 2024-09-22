@@ -1,44 +1,85 @@
 "use client";
 
-import { cn } from "@/lib/utils";
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 
-interface TypingAnimationProps {
-  text: string;
-  duration?: number;
+type TypingTextProps = {
+  text: string[];
+  typingSpeed?: number;
+  delayBetweenLines?: number;
   className?: string;
-}
+  repeatDelay?: number; // Delay before repeating the whole animation
+};
 
-export default function TypingAnimation({
+const TypingText: React.FC<TypingTextProps> = ({
   text,
-  duration = 200,
+  typingSpeed = 100,
+  delayBetweenLines = 1000,
   className,
-}: TypingAnimationProps) {
-  const [displayedText, setDisplayedText] = useState<string>("");
-  const [i, setI] = useState<number>(0);
+  repeatDelay = 2000, // 2 seconds delay before restarting
+}) => {
+  const [displayedText, setDisplayedText] = useState<string[]>(["", ""]);
+  const [currentLine, setCurrentLine] = useState(0);
+  const [visibleLetters, setVisibleLetters] = useState<number[]>([0, 0]);
 
   useEffect(() => {
-    const typingEffect = setInterval(() => {
-      if (i < text.length) {
-        setDisplayedText(text.substring(0, i + 1));
-        setI(i + 1);
-      } else {
-        // Reset to repeat typing
-        setI(0);
-        setDisplayedText("");
-      }
-    }, duration);
+    if (currentLine >= text.length) {
+      // When finished typing all lines, reset to start again after the delay
+      const repeatTimeout = setTimeout(() => {
+        setDisplayedText(["", ""]);
+        setVisibleLetters([0, 0]);
+        setCurrentLine(0);
+      }, repeatDelay);
+      return () => clearTimeout(repeatTimeout);
+    }
 
-    return () => {
-      clearInterval(typingEffect);
-    };
-  }, [duration, i, text]);
+    const currentText = text[currentLine];
+    let index = 0;
+
+    const interval = setInterval(() => {
+      setDisplayedText((prev) => {
+        const newText = [...prev];
+        newText[currentLine] = currentText.slice(0, index + 1);
+        return newText;
+      });
+      setVisibleLetters((prev) => {
+        const newVisible = [...prev];
+        newVisible[currentLine] = index + 1;
+        return newVisible;
+      });
+
+      index += 1;
+
+      if (index === currentText.length) {
+        clearInterval(interval);
+        setTimeout(() => setCurrentLine((prev) => prev + 1), delayBetweenLines);
+      }
+    }, typingSpeed);
+
+    return () => clearInterval(interval);
+  }, [currentLine, text, typingSpeed, delayBetweenLines, repeatDelay]);
+
+  const renderTextWithAnimation = (lineText: string, visibleCount: number) => {
+    return (
+      <>
+        {lineText.split("").map((char, i) => (
+          <span
+            key={i}
+            className={`typing-letter ${i < visibleCount ? "visible" : ""}`}
+          >
+            {char}
+          </span>
+        ))}
+      </>
+    );
+  };
 
   return (
-    <h1
-      className={cn(" font-bold  tracking-[-0.02em] drop-shadow-sm", className)}
-    >
-      {displayedText ? displayedText : text}
-    </h1>
+    <p className={`${className} typing-text`}>
+      {renderTextWithAnimation(displayedText[0], visibleLetters[0])}
+      <br />
+      {renderTextWithAnimation(displayedText[1], visibleLetters[1])}
+    </p>
   );
-}
+};
+
+export default TypingText;

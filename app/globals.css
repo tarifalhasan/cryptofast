@@ -19,12 +19,21 @@ body {
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
 }
+
 .bg-clip-text {
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
+.typing-text span {
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.typing-text span.visible {
+  opacity: 1;
+}
 @layer utilities {
   .text-balance {
     text-wrap: balance;
